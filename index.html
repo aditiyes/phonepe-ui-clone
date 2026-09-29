@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5424b8">
+  <meta name="description" content="PayFlow is a polished, frontend-only digital payments app UI concept.">
+  <title>PayFlow | Payments, made lighter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell" id="home">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#home" aria-label="PayFlow home"><span class="brand-mark"><i class="bi bi-arrow-left-right"></i></span><span>pay<span>flow</span></span></a>
+        <div class="header-user">
+          <div class="avatar" aria-hidden="true">AK</div>
+          <div class="greeting"><span>Good morning,</span><strong>Aditi</strong></div>
+        </div>
+        <div class="header-actions">
+          <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark theme" title="Switch theme"><i class="bi bi-moon-stars"></i></button>
+          <button class="icon-button notification-button" id="notificationButton" type="button" aria-label="Notifications"><i class="bi bi-bell"></i><span class="notification-dot"></span></button>
+          <button class="scan-header" type="button" data-bs-toggle="modal" data-bs-target="#scanModal"><i class="bi bi-qr-code-scan"></i><span>Scan QR</span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container app-main">
+      <section class="welcome-row" aria-label="Search PayFlow">
+        <div><p class="eyebrow">TUESDAY, 24 SEPTEMBER</p><h1>Your money, <span>in motion.</span></h1></div>
+        <label class="search-box"><i class="bi bi-search" aria-hidden="true"></i><span class="visually-hidden">Search contacts, bills, and services</span><input id="searchInput" type="search" placeholder="Search contacts, bills, and services" autocomplete="off"></label>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Account overview and quick actions">
+        <article class="balance-card">
+          <div class="balance-top"><span class="balance-label"><i class="bi bi-wallet2"></i> PayFlow balance</span><span class="balance-chip"><i class="bi bi-shield-check"></i> Secure</span></div>
+          <div class="balance-amount-row"><div><span class="balance-caption">Available balance</span><p class="balance-amount" id="balanceAmount" data-balance="₹12,450.00">₹12,450.00</p></div><button class="balance-toggle" id="balanceToggle" type="button" aria-label="Hide balance" title="Hide balance"><i class="bi bi-eye"></i></button></div>
+          <div class="balance-bottom"><span>Linked to <strong>•••• 4082</strong></span><button type="button" class="text-action" data-toast="Add money is a demo action. No money will be moved.">Add money <i class="bi bi-arrow-up-right"></i></button></div>
+          <div class="balance-orbit orbit-one"></div><div class="balance-orbit orbit-two"></div>
+        </article>
+
+        <article class="quick-panel" id="payments">
+          <div class="section-heading compact-heading"><div><p class="eyebrow">MOVE MONEY</p><h2>Quick actions</h2></div><span class="heading-note">Tap to get started</span></div>
+          <div class="quick-grid">
+            <button class="quick-action" type="button" data-action="Scan & Pay" data-scan><span class="quick-icon quick-lilac"><i class="bi bi-qr-code-scan"></i></span><span>Scan &amp; Pay</span></button>
+            <button class="quick-action" type="button" data-action="To Mobile Number"><span class="quick-icon quick-peach"><i class="bi bi-phone"></i></span><span>To Mobile<br>Number</span></button>
+            <button class="quick-action" type="button" data-action="To Bank Account"><span class="quick-icon quick-mint"><i class="bi bi-bank"></i></span><span>To Bank<br>Account</span></button>
+            <button class="quick-action" type="button" data-action="To Self Account"><span class="quick-icon quick-yellow"><i class="bi bi-arrow-left-right"></i></span><span>To Self<br>Account</span></button>
+            <button class="quick-action" type="button" data-action="UPI ID"><span class="quick-icon quick-blue"><i class="bi bi-at"></i></span><span>UPI ID</span></button>
+            <button class="quick-action" type="button" data-action="Request Money"><span class="quick-icon quick-pink"><i class="bi bi-cash-coin"></i></span><span>Request<br>Money</span></button>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section bills-section" id="bills">
+        <div class="section-heading"><div><p class="eyebrow">EVERYDAY ESSENTIALS</p><h2>Recharge &amp; pay bills</h2></div><button class="view-all" type="button" data-toast="You're all caught up on bills.">View all <i class="bi bi-arrow-right"></i></button></div>
+        <div class="service-grid">
+          <button class="service-card" type="button" data-action="Mobile Recharge"><span class="service-icon icon-violet"><i class="bi bi-phone"></i></span><span>Mobile<br>Recharge</span></button>
+          <button class="service-card" type="button" data-action="Electricity"><span class="service-icon icon-amber"><i class="bi bi-lightning-charge"></i></span><span>Electricity</span></button>
+          <button class="service-card" type="button" data-action="DTH"><span class="service-icon icon-coral"><i class="bi bi-tv"></i></span><span>DTH</span></button>
+          <button class="service-card" type="button" data-action="Credit Card"><span class="service-icon icon-blue"><i class="bi bi-credit-card"></i></span><span>Credit Card</span></button>
+          <button class="service-card" type="button" data-action="Broadband"><span class="service-icon icon-green"><i class="bi bi-wifi"></i></span><span>Broadband</span></button>
+          <button class="service-card" type="button" data-action="Water"><span class="service-icon icon-sky"><i class="bi bi-droplet"></i></span><span>Water</span></button>
+          <button class="service-card" type="button" data-action="Gas Cylinder"><span class="service-icon icon-orange"><i class="bi bi-fire"></i></span><span>Gas Cylinder</span></button>
+          <button class="service-card" type="button" data-action="Insurance"><span class="service-icon icon-rose"><i class="bi bi-heart-pulse"></i></span><span>Insurance</span></button>
+        </div>
+      </section>
+
+      <section class="content-section financial-section" id="rewards">
+        <div class="section-heading"><div><p class="eyebrow">GROW &amp; DISCOVER</p><h2>Financial services</h2></div><button class="view-all" type="button" data-toast="More services are coming soon.">Explore <i class="bi bi-arrow-right"></i></button></div>
+        <div class="finance-grid">
+          <button class="finance-item" type="button" data-action="Mutual Funds"><span class="finance-icon finance-purple"><i class="bi bi-graph-up-arrow"></i></span><span>Mutual Funds</span><i class="bi bi-arrow-up-right item-arrow"></i></button>
+          <button class="finance-item" type="button" data-action="Gold"><span class="finance-icon finance-gold"><i class="bi bi-coin"></i></span><span>Gold</span><i class="bi bi-arrow-up-right item-arrow"></i></button>
+          <button class="finance-item" type="button" data-action="Loans"><span class="finance-icon finance-blue"><i class="bi bi-currency-rupee"></i></span><span>Loans</span><i class="bi bi-arrow-up-right item-arrow"></i></button>
+          <button class="finance-item" type="button" data-action="Insurance"><span class="finance-icon finance-green"><i class="bi bi-shield-heart"></i></span><span>Insurance</span><i class="bi bi-arrow-up-right item-arrow"></i></button>
+          <button class="finance-item" type="button" data-action="Rewards"><span class="finance-icon finance-pink"><i class="bi bi-stars"></i></span><span>Rewards</span><i class="bi bi-arrow-up-right item-arrow"></i></button>
+        </div>
+      </section>
+
+      <section class="content-section offers-section" aria-label="Offers">
+        <div class="section-heading"><div><p class="eyebrow">A LITTLE EXTRA</p><h2>Offers picked for you</h2></div><div class="carousel-arrows"><button type="button" data-bs-target="#offersCarousel" data-bs-slide="prev" aria-label="Previous offer"><i class="bi bi-arrow-left"></i></button><button type="button" data-bs-target="#offersCarousel" data-bs-slide="next" aria-label="Next offer"><i class="bi bi-arrow-right"></i></button></div></div>
+        <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5500">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><article class="offer-banner offer-lavender"><div class="offer-copy"><span class="offer-kicker">THE LITTLE JOYS</span><h3>Pay your bills.<br>Get a little back.</h3><p>Earn up to ₹100 in rewards on eligible bill payments.</p><button type="button" data-toast="Offer saved to your rewards.">Explore offer <i class="bi bi-arrow-right"></i></button></div><div class="offer-art art-sparkles" aria-hidden="true"><span class="sparkle sparkle-a">✦</span><span class="sparkle sparkle-b">✳</span><span class="offer-token"><i class="bi bi-gift"></i></span><span class="sparkle sparkle-c">✧</span></div><span class="offer-index">01 <span>/ 03</span></span></article></div>
+            <div class="carousel-item"><article class="offer-banner offer-coral"><div class="offer-copy"><span class="offer-kicker">RECHARGE &amp; REJOICE</span><h3>Your next recharge<br>has a bright side.</h3><p>Discover monthly plans and offers made for you.</p><button type="button" data-action="Mobile Recharge">View plans <i class="bi bi-arrow-right"></i></button></div><div class="offer-art art-recharge" aria-hidden="true"><span class="phone-shape"><i class="bi bi-lightning-charge-fill"></i></span><span class="circle-sun"></span></div><span class="offer-index">02 <span>/ 03</span></span></article></div>
+            <div class="carousel-item"><article class="offer-banner offer-mint"><div class="offer-copy"><span class="offer-kicker">GOOD THINGS ADD UP</span><h3>Small steps.<br>Steady savings.</h3><p>Explore a simple way to start your investing journey.</p><button type="button" data-action="Mutual Funds">Get inspired <i class="bi bi-arrow-right"></i></button></div><div class="offer-art art-growth" aria-hidden="true"><span class="growth-plant"><i class="bi bi-graph-up-arrow"></i></span><span class="growth-dot"></span></div><span class="offer-index">03 <span>/ 03</span></span></article></div>
+          </div>
+          <div class="carousel-indicators"><button type="button" data-bs-target="#offersCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Offer 1"></button><button type="button" data-bs-target="#offersCarousel" data-bs-slide-to="1" aria-label="Offer 2"></button><button type="button" data-bs-target="#offersCarousel" data-bs-slide-to="2" aria-label="Offer 3"></button></div>
+        </div>
+      </section>
+
+      <section class="content-section transactions-section" id="history">
+        <div class="section-heading transaction-heading"><div><p class="eyebrow">YOUR MONEY TRAIL</p><h2>Recent transactions</h2></div><button class="view-all" type="button" data-toast="Showing your latest activity.">See history <i class="bi bi-arrow-right"></i></button></div>
+        <div class="transaction-list" id="transactionList" aria-live="polite">
+          <article class="transaction-row" data-search="maya desai sent upi today"><span class="transaction-avatar avatar-lilac">MD</span><div class="transaction-info"><strong>Maya Desai</strong><span>Today, 10:42 AM <span class="transaction-dot">·</span> UPI transfer</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-debit">− ₹850.00</strong></div></article>
+          <article class="transaction-row" data-search="electricity bill bill payment today"><span class="transaction-avatar avatar-amber"><i class="bi bi-lightning-charge"></i></span><div class="transaction-info"><strong>Electricity Bill</strong><span>Today, 9:15 AM <span class="transaction-dot">·</span> Bill payment</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-debit">− ₹1,240.00</strong></div></article>
+          <article class="transaction-row" data-search="rohan kulkarni received upi yesterday"><span class="transaction-avatar avatar-mint">RK</span><div class="transaction-info"><strong>Rohan Kulkarni</strong><span>Yesterday, 6:28 PM <span class="transaction-dot">·</span> Received</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-credit">+ ₹2,500.00</strong></div></article>
+          <article class="transaction-row" data-search="jio mobile recharge yesterday"><span class="transaction-avatar avatar-rose"><i class="bi bi-phone"></i></span><div class="transaction-info"><strong>Jio Recharge</strong><span>Yesterday, 2:04 PM <span class="transaction-dot">·</span> Mobile recharge</span></div><div class="transaction-meta"><span class="status-badge status-pending">Pending</span><strong class="amount-debit">− ₹599.00</strong></div></article>
+          <article class="transaction-row" data-search="ananya shah received bank monday"><span class="transaction-avatar avatar-blue">AS</span><div class="transaction-info"><strong>Ananya Shah</strong><span>Monday, 11:36 AM <span class="transaction-dot">·</span> Received</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-credit">+ ₹1,200.00</strong></div></article>
+          <article class="transaction-row" data-search="netflix broadband bill payment sunday"><span class="transaction-avatar avatar-peach"><i class="bi bi-wifi"></i></span><div class="transaction-info"><strong>Broadband Bill</strong><span>Sunday, 8:10 PM <span class="transaction-dot">·</span> Bill payment</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-debit">− ₹799.00</strong></div></article>
+          <article class="transaction-row" data-search="neel patil sent upi sunday"><span class="transaction-avatar avatar-gold">NP</span><div class="transaction-info"><strong>Neel Patil</strong><span>Sunday, 3:45 PM <span class="transaction-dot">·</span> UPI transfer</span></div><div class="transaction-meta"><span class="status-badge status-success">Success</span><strong class="amount-debit">− ₹320.00</strong></div></article>
+          <p class="empty-state d-none" id="emptyState">No transactions match that search.</p>
+        </div>
+      </section>
+      <footer class="app-footer"><span class="footer-mark"><i class="bi bi-arrow-left-right"></i></span><span>Thoughtfully made for everyday money.</span><span class="footer-secure"><i class="bi bi-shield-lock"></i> Your demo data stays here</span></footer>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item active" type="button" data-target="home"><i class="bi bi-house-door"></i><span>Home</span></button>
+      <button class="nav-item" type="button" data-target="payments"><i class="bi bi-arrow-left-right"></i><span>Payments</span></button>
+      <button class="nav-item" type="button" data-target="history"><i class="bi bi-clock-history"></i><span>History</span></button>
+      <button class="nav-item" type="button" data-target="rewards"><i class="bi bi-stars"></i><span>Rewards</span></button>
+      <button class="nav-item" type="button" data-target="profile"><i class="bi bi-person-circle"></i><span>Profile</span></button>
+    </nav>
+  </div>
+
+  <div class="modal fade" id="scanModal" tabindex="-1" aria-labelledby="scanModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm"><div class="modal-content scan-modal-content"><div class="modal-header border-0"><div><p class="eyebrow mb-1">PAYFLOW SCAN</p><h2 class="modal-title" id="scanModalTitle">Scan &amp; Pay</h2></div><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body text-center"><div class="qr-frame" role="img" aria-label="Decorative sample QR code"><div class="qr-grid"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><span class="qr-center"><i class="bi bi-arrow-left-right"></i></span></div><p class="scan-hint">This is a sample QR placeholder.<br>No payment can be made.</p><button type="button" class="scan-upload" data-bs-dismiss="modal" data-toast="QR scanning is a visual demo only."><i class="bi bi-image"></i> Upload from gallery</button></div></div></div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="appToast" class="toast app-toast" role="status" aria-live="polite" aria-atomic="true"><div class="toast-body"><span class="toast-icon"><i class="bi bi-check2"></i></span><span id="toastMessage">Done</span><button type="button" class="btn-close ms-auto" data-bs-dismiss="toast" aria-label="Close"></button></div></div></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

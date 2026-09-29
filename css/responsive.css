@@ -1,0 +1,79 @@
+@media (min-width: 1200px) {
+  .app-main { padding-top: 36px; }
+  .content-section { margin-top: 37px; }
+}
+
+@media (max-width: 991.98px) {
+  .app-main { max-width: 780px; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .balance-card { min-height: 205px; }
+  .quick-panel { padding-bottom: 9px; }
+  .quick-grid { grid-template-columns: repeat(6, 1fr); }
+  .service-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .service-card { min-height: 91px; }
+  .finance-grid { grid-template-columns: repeat(3, 1fr); }
+  .finance-item { min-height: 62px; }
+}
+
+@media (max-width: 575.98px) {
+  html { scroll-padding-top: 76px; }
+  .app-shell { padding-bottom: 80px; }
+  .topbar-inner { width: calc(100% - 28px); height: 64px; gap: 11px; }
+  .brand { gap: 7px; font-size: 18px; }
+  .brand-mark { width: 29px; height: 29px; border-radius: 10px; }
+  .header-user { gap: 8px; margin-left: auto; margin-right: 0; }
+  .header-user .avatar { width: 33px; height: 33px; font-size: 10px; }
+  .greeting span { font-size: 9px; }.greeting strong { font-size: 11px; }
+  .header-actions { gap: 6px; }
+  .icon-button { width: 34px; height: 34px; border-radius: 11px; }
+  .icon-button i { font-size: 15px; }
+  .notification-button { display: none; }
+  .scan-header { width: 35px; min-height: 35px; padding: 0; justify-content: center; border-radius: 11px; }
+  .scan-header i { font-size: 17px; }.scan-header span { display: none; }
+  .app-main { padding: 23px 16px 0; }
+  .welcome-row { display: block; margin-bottom: 17px; }
+  .welcome-row .eyebrow { margin-bottom: 5px; font-size: 8px; }
+  .welcome-row h1 { font-size: 24px; }
+  .search-box { width: 100%; height: 42px; margin-top: 15px; }
+  .search-box input { font-size: 11px; }
+  .dashboard-grid { gap: 13px; }
+  .balance-card { min-height: 192px; padding: 17px 18px 15px; border-radius: 17px; }
+  .balance-amount-row { margin-top: 17px; }.balance-amount { font-size: 29px; }
+  .balance-bottom { margin-top: 17px; }
+  .quick-panel { padding: 15px 10px 7px; border-radius: 16px; }
+  .compact-heading { padding: 0 5px; }.compact-heading h2 { font-size: 15px; }.heading-note { font-size: 9px; }
+  .quick-grid { grid-template-columns: repeat(3, 1fr); gap: 1px 0; }
+  .quick-action { min-height: 91px; gap: 6px; font-size: 9px; }
+  .quick-icon { width: 39px; height: 39px; border-radius: 14px; font-size: 16px; }
+  .content-section { margin-top: 27px; }
+  .section-heading { margin-bottom: 12px; }.section-heading h2 { font-size: 16px; }.section-heading .eyebrow { font-size: 8px; }
+  .view-all { font-size: 10px; }
+  .service-grid { grid-template-columns: repeat(4, 1fr); gap: 7px; }
+  .service-card { min-height: 86px; padding: 9px 2px; gap: 7px; border-radius: 12px; font-size: 9px; }
+  .service-icon { width: 34px; height: 34px; border-radius: 12px; font-size: 15px; }
+  .finance-grid { grid-template-columns: repeat(2, 1fr); gap: 7px; }
+  .finance-item { min-height: 59px; padding: 8px; gap: 8px; border-radius: 12px; font-size: 10px; }
+  .finance-icon { width: 34px; height: 34px; border-radius: 11px; font-size: 15px; }
+  .item-arrow { font-size: 10px; }
+  .offers-section { margin-top: 29px; }
+  .offer-banner { min-height: 195px; padding: 20px 18px; border-radius: 15px; }
+  .offer-copy { width: 72%; }.offer-kicker { font-size: 8px; }.offer-copy h3 { font-size: 20px; }.offer-copy p { max-width: 210px; font-size: 10px; line-height: 1.4; }.offer-copy button { padding: 7px 9px; font-size: 9px; }
+  .offer-art { right: -4%; width: 39%; }.offer-token { width: 70px; height: 70px; border-radius: 22px; font-size: 30px; }.sparkle-a { right: 18%; }.sparkle-c { left: 5%; }.phone-shape { width: 58px; height: 92px; font-size: 22px; }.circle-sun { right: 8%; width: 84px; height: 84px; }.growth-plant { width: 82px; height: 82px; font-size: 32px; }.growth-dot { right: 12%; }
+  .carousel-indicators { bottom: 8px; left: 18px; }.offer-index { right: 11px; bottom: 10px; }
+  .transactions-section { margin-top: 29px; }
+  .transaction-row { min-height: 66px; padding: 9px 10px; gap: 9px; }
+  .transaction-avatar { width: 34px; height: 34px; border-radius: 11px; font-size: 10px; }
+  .transaction-info { gap: 3px; }.transaction-info strong { font-size: 10px; }.transaction-info > span { font-size: 8px; }.transaction-dot { margin: 0 1px; }
+  .transaction-meta { min-width: 83px; }.transaction-meta > strong { font-size: 9px; }.status-badge { padding: 3px 6px; font-size: 7px; }
+  .app-footer { flex-wrap: wrap; gap: 7px; font-size: 9px; }.footer-secure { width: 100%; margin-left: 30px; }
+  .bottom-nav { height: 65px; padding: 6px 12px calc(6px + env(safe-area-inset-bottom)); }
+  .nav-item { min-width: 48px; padding: 4px 7px; font-size: 8px; }.nav-item i { font-size: 17px; }
+  .toast-container { right: 0 !important; bottom: 70px !important; left: 0 !important; padding: 10px !important; }.app-toast { min-width: 0; width: 100%; }
+}
+
+@media (max-width: 360px) {
+  .topbar-inner { width: calc(100% - 20px); gap: 7px; }.brand { font-size: 16px; }.header-user { gap: 6px; }.greeting span { font-size: 8px; }.greeting strong { font-size: 10px; }
+  .icon-button { width: 31px; height: 31px; }.scan-header { width: 32px; min-height: 32px; }
+  .app-main { padding-right: 12px; padding-left: 12px; }.balance-amount { font-size: 26px; }.heading-note { display: none; }
+  .transaction-meta { min-width: 76px; }.transaction-row { gap: 7px; padding-right: 7px; padding-left: 8px; }
+}
